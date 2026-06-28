@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  /* Flowstate Design System — Dark martial arts aesthetic */
+  --bg-base: #0a0a0b;
+  --bg-surface: #111114;
+  --bg-elevated: #18181c;
+  --bg-overlay: #1f1f24;
+  --border: #2a2a30;
+  --border-subtle: #1e1e23;
+
+  /* Accent — a specific ember orange, not generic red */
+  --accent: #e85d26;
+  --accent-muted: #7a2e10;
+  --accent-subtle: #2a1208;
+
+  /* Text */
+  --text-primary: #f0ede8;
+  --text-secondary: #8b8891;
+  --text-muted: #4a4850;
+  --text-accent: #e85d26;
+
+  /* Status */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* Selection */
+::selection { background: var(--accent-muted); color: var(--text-primary); }
