@@ -121,11 +121,12 @@ export default function MembersPage() {
   const handleSave = async () => {
     setSaving(true)
     const payload = {
-      ...form,
-      membership_type_id: form.membership_type_id || null,
-      payment_method: form.payment_method || null,
-    }
-
+  ...form,
+  membership_type_id: form.membership_type_id || null,
+  payment_method: form.payment_method || null,
+  membership_start_date: form.membership_start_date || null,
+  membership_renewal_date: form.membership_renewal_date || null,
+}
     if (editing) {
       await supabase.from('profiles').update(payload).eq('id', editing.id)
     } else {
